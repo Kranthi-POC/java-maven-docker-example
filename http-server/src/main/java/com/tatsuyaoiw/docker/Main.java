@@ -16,7 +16,7 @@ public class Main {
 			HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
 			server.createContext("/", new HttpHandler() {
 				public void handle(HttpExchange httpExchange) throws IOException {
-					String body = "Hello world!";
+					String body = "Hello ATS!";
 					byte[] bytes = body.getBytes(Charset.forName("UTF-8"));
 					httpExchange.sendResponseHeaders(200, bytes.length);
 					OutputStream os = httpExchange.getResponseBody();
